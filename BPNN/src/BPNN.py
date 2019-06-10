@@ -282,6 +282,8 @@ def plot(train_data, test_data, k):
     # 设置坐标轴范围
     plt.xticks(np.arange(-5.5, 5.6, 0.5))
     plt.yticks(np.arange(-5.5, 5.6, 0.5))
+    # 设置图像标题
+    ax1.set_title('BP神经网络分离超平面',fontproperties="SimHei")
 
     # 绘制打完标签后的测试数据的散点图
     test_label0 = ax1.scatter(test_data[:k][:,0],test_data[:k][:,1],marker='.',c='red')
@@ -294,7 +296,10 @@ def plot(train_data, test_data, k):
     # 训练数据图例说明
     plt.legend(handles=[train_label0, train_label1], labels=['0', '1'], loc='lower right')
 
-    # 显示
+    # 添加注释
+    ax1.text(-4.5, 5.0, '(红色点是测试数据中的0样本，黑色点是1样本)',fontproperties="SimSun")
+    # 保存显示
+    plt.savefig('./../resources/BP神经网络分离超平面.png')
     plt.show()
 
 if __name__ == '__main__':
