@@ -164,18 +164,23 @@ def plotBestFit(dataMat,labelVect,weights):
 
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    ax.scatter(xcord1, ycord1, s=30, c='red', marker='s')
-    ax.scatter(xcord2, ycord2, s=30, c='green')
-    x = np.arange(-4.0, 4.0, 0.1)
+    ax.set_title('Logistic分离超平面', fontproperties="SimHei")
+    train_label0 = ax.scatter(xcord2, ycord2, s=30, c='green')
+    train_label1 = ax.scatter(xcord1, ycord1, s=30, c='red', marker='s')
+    plt.legend(handles=[train_label0, train_label1], labels=['0', '1'], loc='best')
+
+    x = np.arange(0, 10.0, 0.1)
     y = (-weights[1,0]*x-weights[0,0])/weights[2,0]
     ax.plot(x,y)
     plt.xlabel('X1'); plt.ylabel("X2")
+    # 训练数据图例说明
+    plt.savefig('./../resources/Logistic分离超平面.png')
     plt.show()
 
 # 主函数
 if __name__ == '__main__':
     # 准备训练数据
-    dataMat,labelVect = load_data('G:/master/python/PycharmProjects/ml/logistic/data/train_data.txt', True)
+    dataMat,labelVect = load_data('./../data/train_data', True)
     # dataMat,labelVect = load_data('G:/master/python/PycharmProjects/ml/logistic/data/testSet.txt', True)
 
     # 训练LR模型
