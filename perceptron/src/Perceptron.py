@@ -49,9 +49,13 @@ class Perceptron:
         # 设置二维坐标
         ax1.set_xlabel('x1')
         ax1.set_ylabel('x2')
+        # 设置标题
+        ax1.set_title('Perceptron分离超平面', fontproperties="SimHei")
         # 绘制散点图
-        ax1.scatter(self.__data[:2,0], self.__data[:2,1], marker='o', c='c')
-        ax1.scatter(self.__data[2:,0], self.__data[2:,1], marker='D', c='m')
+        train_label_positive = ax1.scatter(self.__data[:2,0], self.__data[:2,1], marker='o', c='c')
+        train_label_negative = ax1.scatter(self.__data[2:,0], self.__data[2:,1], marker='D', c='m')
+        # 训练数据图例说明
+        plt.legend(handles=[train_label_positive, train_label_negative], labels=['1', '-1'], loc='best')
         # 绘制直线图（分离超平面）
         if w[1] != 0:
             x_points = np.linspace(0, 5, 20)
@@ -61,6 +65,7 @@ class Perceptron:
             x_point = -b / w[0] # B=0时：直线方程为x = -C/A
             ax1.vlines(x_point, -5, 5, colors = 'y')
         # 显示
+        plt.savefig('./../resources/Perceptron分离超平面2.png')
         plt.show()
 
 
