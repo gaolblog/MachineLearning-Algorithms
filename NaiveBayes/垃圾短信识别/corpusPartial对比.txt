@@ -1,0 +1,2 @@
+原始：['hope', 'you', 'are', 'having', 'good', 'week', 'just', 'checking'], ['give', 'back', 'thanks']
+清理后：'seeking', 'alibi', 'approaching', 'promised', 'weekend', 'mac', 'ihave', 'mack', 'born', 'behalf'
