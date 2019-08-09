@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @Time     : 2019/4/29 11:23
+# @Time     : 2018/10/15 09:23
 # @Author   : gaol
-# @Project  : RecommenderSystem
+# @Project  : RecommendationSystem
 # @File     : UserCF.py
 
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @Time     : 2019/5/13 11:22
+# @Time     : 2018/10/21 20:22
 # @Author   : gaol
-# @Project  : RecommenderSystem
+# @Project  : RecommendationSystem
 # @File     : MovieRecommend.py
 
 import time

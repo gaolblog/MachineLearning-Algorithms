@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @Time     : 2019/5/21 10:43
+# @Time     : 2019/5/13 10:43
 # @Author   : gaol
-# @Project  : RecommenderSystem
+# @Project  : RecommendationSystem
 # @File     : PersonalRank.py
 
 def PersonalRank(G, alpha, root, max_step):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @Time     : 2019/5/13 21:35
+# @Time     : 2019/4/29 21:35
 # @Author   : gaol
-# @Project  : RecommenderSystem
+# @Project  : RecommendationSystem
 # @File     : LFM.py
 
 import random
