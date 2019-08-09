@@ -1,7 +1,7 @@
 '''
 Created on Oct 18, 2017
 
-@author: GaoLong
+@author: gaol
 '''
 
 from numpy import *
